@@ -1,0 +1,20 @@
+services:
+  llm-deploy-v1:
+    image: llm-deploy-v1
+    ports:
+      - "8000:8000"
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    networks:
+      - my_network
+
+  qdrant_vectordb:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+    networks:
+      - my_network
+
+networks:
+  my_network:
