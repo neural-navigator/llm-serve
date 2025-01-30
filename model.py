@@ -1,5 +1,5 @@
 """
-This module is responsible to load the model from the memory, if the model is not in memory then this module will
+This module is responsible to load the model from the disk, if the model is not in memory then this module will
 download the model from huggingface
 """
 import os
